@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Library for node js projects.
+ * package-storage
  */
 
 /**
@@ -43,7 +43,7 @@ class Template {
 }
 
 /**
- * Template Library
+ * package storage
  * @module template
  */
 module.exports = Template
