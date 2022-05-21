@@ -3,14 +3,34 @@ storage container logical partitions management.
 
 ## Example
 ```js
-// package define
-const Template = require('../src')
+const assert = require('assert')
+
+// package define 
+const Storage = require('../src')
 
 // module instance
-var template = new Template()
+var storage = new Storage()
 
-// a normal status code is returned when the package runs successfully.
-process.exit(template instanceof Template == true ? 0 : 1)
+// mock
+let _parameters = {
+  partitionId: '123456789123456',
+  item: {},
+}
+
+// parameters
+let expected = _parameters.item
+
+// operation
+storage.addItem(_parameters.partitionId, _parameters.item)
+
+// read item
+let result = storage.readItem(_parameters.partitionId, 0)
+
+// result
+let actual = result
+
+// condination item
+assert.deepEqual(actual, expected)
 ```
 
 # Getting Started
