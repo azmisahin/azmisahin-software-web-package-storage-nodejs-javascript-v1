@@ -4,7 +4,7 @@
 const assert = require('assert')
 
 // package define 
-const Storage = require('../src')
+const Storage = require('package-storage-javascript')
 
 // module instance
 var storage = new Storage()
